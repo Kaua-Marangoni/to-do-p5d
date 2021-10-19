@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(90deg, #2b77a4 0%, #5f53b9 45%);
+}
+
+.container {
+    width: 541px;
+    max-height: 90vh;
+    overflow: auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #fff;
+    border-radius: 5px;
+    padding: 30px 20px;
+}
+
+#input-task {
+    width: 70%;
+    height: 40px;
+    padding-left: 15px;
+
+    border: 2px solid #d1d3d466;
+    border-radius: 5px;
+}
+
+#button-add {
+    background: #8052EC;
+    border-radius: 5px;
+    width: 25%;
+    height: 40px;
+    border: none;
+    float: right;
+
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: .1s;
+
+    /* opacity: .8;
+    pointer-events: none; */
+}
+
+/* button.ativado {
+    background: blanchedalmond;
+} */
+
+#button-add:hover {
+    opacity: .9;
+}
+
+#button-add:active {
+    opacity: .8;
+}
+
+#tasks {
+    width: 100%;
+    list-style: none;
+    margin-top: 45px;
+}
+
+.item-task {
+    display: flex;
+    padding: 20px 45px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+
+    font-size: 15px;
+    color: #000;
+
+    background: #F2F2F2;
+    box-shadow: 1px 4px 10px #00000033;
+    border-radius: 5px;
+}
+
+
+
+.delete-button {
+    height: 100%;
+    width: 40px;
+    color: #ff0000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: none;
+    background: #F2F2F2;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    cursor: pointer;
+}
+
+.checked-button {
+    height: 100%;
+    width: 40px;
+    color: #4F0FC5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    cursor: pointer;
+}
+
+#number-of-tasks {
+    font-size: 15px;
+    margin-top: 25px;
+    font-weight: 300;
+}
+
+.completed {
+    background: #d4f88d;
+    text-decoration: line-through;
+}
+
+.completed .delete-button {
+    background: #d4f88d;
+}
+
+@media (max-width: 550px) {
+    .container {
+        max-height: 100vh;
+        height: 100vh;
+        width: 100%;
+        border-radius: 0;
+        position: inherit;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
+}
+
+@media (max-width: 360px) {
+    #button-add {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 310px) {
+    #button-add {
+        font-size: 13px;
+    }
+}
