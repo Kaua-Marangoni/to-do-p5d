@@ -12,7 +12,7 @@ body {
     background: linear-gradient(90deg, #2b77a4 0%, #5f53b9 45%);
 }
 
-.container {
+main {
     width: 541px;
     max-height: 90vh;
     overflow: auto;
@@ -126,7 +126,7 @@ body {
     cursor: pointer;
 }
 
-#number-of-tasks {
+#number-of-tasks, #modal p {
     font-size: 15px;
     margin-top: 25px;
     font-weight: 300;
@@ -141,8 +141,68 @@ body {
     background: #d4f88d;
 }
 
+#modal-container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+#modal {
+    background: #fff8dc;
+    width: 50%;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    padding: 40px 15px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    animation: modal 2500ms;
+}
+
+.fa-exclamation {
+    font-size: 20px;
+    color: red;
+    border: 3px solid black;
+    padding: 15px 23px;
+    border-radius: 50%;
+}
+
+@keyframes modal {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+}
+
 @media (max-width: 550px) {
-    .container {
+    main {
         max-height: 100vh;
         height: 100vh;
         width: 100%;

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/f47bef615d.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +17,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <main>
         <input id="input-task" type="text" placeholder="O que tenho que fazer...">
 
         <button id="button-add">Adicionar</button>
@@ -24,10 +25,19 @@
         <p id="number-of-tasks"></p>
 
         <ul id="tasks">
-            
+
         </ul>
 
+    </main>
+
+    <div id="modal-container">
+        <div id="modal">
+            <i class="fas fa-exclamation"></i>
+
+            <p class="paragraph-modal">Por favor, digite uma tarefa!</p>
+        </div>
     </div>
+
 </body>
 
 <script src="./main.js"></script>

@@ -5,18 +5,6 @@ let CompleteList = document.getElementById("tasks")
 let checkTaskCompleted = document.getElementById("check")
 let numberOfTasks = document.getElementById("number-of-tasks")
 
-// inputTask.onkeyup = () => {
-//     let userData = inputTask.value // getting user entered
-
-//     if (userData.trim() != 0) { //if user values aren't only space
-//         buttonAddTask.classList.add("active") //active the add button
-//     } else {
-//         buttonAddTask.classList.remove("active") //remove active the add button
-//     }
-// }
-
-
-
 let arrayTasks = []
 
 reloadTask()
@@ -51,15 +39,18 @@ function showTasks() {
     localStorage.setItem("Nova Tarefa", JSON.stringify(arrayTasks))
 }
 
-
 function addTask() {
-    if (inputTask.value) {
+    if (inputTask.value && inputTask.value.trim() != 0) {
         arrayTasks.push({
             task: inputTask.value,
             completed: false
         })
     } else {
-        alert("Digite uma terefa")
+        document.getElementById("modal-container").style.display = "flex"
+        
+        setTimeout( function() {
+            document.getElementById("modal-container").style.display = "none"
+        }, 2500 );
     }
 
     inputTask.value = ""
