@@ -36,7 +36,7 @@ function showTasks() {
 
     CompleteList.innerHTML = newLi
 
-    localStorage.setItem("Nova Tarefa", JSON.stringify(arrayTasks))
+    localStorage.setItem("to-do-p5d:newTask", JSON.stringify(arrayTasks))
 }
 
 function addTask() {
@@ -74,7 +74,7 @@ function taskCompleted(index) {
 }
 
 function reloadTask() {
-    let myTasks = localStorage.getItem("Nova Tarefa")
+    let myTasks = localStorage.getItem("to-do-p5d:newTask")
 
     if (myTasks) {
         arrayTasks = JSON.parse(myTasks)
